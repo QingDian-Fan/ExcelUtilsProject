@@ -26,12 +26,12 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    publishing {
+        singleVariant("release")
+    }
 }
 
-task generateSourcesJar(type: Jar){
-    from android.sourceSets.main.java.srcDirs
-    classifier 'sources'
-}
+
 
 dependencies {
     implementation 'org.apache.poi:poi:3.9'
